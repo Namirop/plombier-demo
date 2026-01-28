@@ -160,13 +160,13 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 text-center text-xs text-primary-foreground/50 md:flex-row md:text-left">
           <p>&copy; {currentYear} PlombiPro - Tous droits réservés. SIRET : 123 456 789 00012</p>
           <div className="flex gap-6">
-            <Link href="#" className="transition-colors hover:text-primary-foreground">
+            <Link href="/mentions-legales" className="transition-colors hover:text-primary-foreground">
               Mentions légales
             </Link>
-            <Link href="#" className="transition-colors hover:text-primary-foreground">
+            <Link href="/politique-confidentialite" className="transition-colors hover:text-primary-foreground">
               Politique de confidentialité
             </Link>
-            <Link href="#" className="transition-colors hover:text-primary-foreground">
+            <Link href="/cgv" className="transition-colors hover:text-primary-foreground">
               CGV
             </Link>
           </div>

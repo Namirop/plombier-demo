@@ -154,24 +154,20 @@ export default function UrgencePage() {
               <p className="mt-4 text-muted-foreground">
                 Nous intervenons en urgence sur l&apos;ensemble de ces communes :
               </p>
-              <div className="relative mt-8 aspect-square overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&h=600&fit=crop"
-                  alt="Paris - Zone d'intervention"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-primary/90 p-8">
-                  <div className="grid h-full grid-cols-2 content-center gap-3">
-                    {companyInfo.zones.map((zone) => (
-                      <div key={zone} className="flex items-center gap-2 text-primary-foreground">
-                        <MapPin className="h-4 w-4 shrink-0 text-accent" />
-                        <span className="text-sm">{zone}</span>
-                      </div>
-                    ))}
+              <div className="mt-8 flex flex-wrap gap-3">
+                {companyInfo.zones.map((zone) => (
+                  <div
+                    key={zone}
+                    className="flex items-center gap-2 border-2 border-border bg-card px-4 py-2 transition-colors hover:border-accent"
+                  >
+                    <MapPin className="h-4 w-4 shrink-0 text-accent" />
+                    <span className="font-medium text-foreground">{zone}</span>
                   </div>
-                </div>
+                ))}
               </div>
+              <p className="mt-6 text-sm text-muted-foreground">
+                Intervention possible dans d&apos;autres communes sur demande.
+              </p>
             </div>
           </div>
         </div>

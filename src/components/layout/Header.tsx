@@ -96,37 +96,58 @@ export default function Header() {
                 <span className="sr-only">Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-primary text-primary-foreground">
-              <SheetTitle className="text-primary-foreground">
-                PLOMBIPRO
-              </SheetTitle>
-              <nav className="mt-8 flex flex-col gap-1">
+            <SheetContent side="right" className="w-[280px] border-l-0 bg-primary p-0">
+              {/* Header du menu */}
+              <div className="flex items-center gap-3 border-b border-primary-foreground/10 px-6 py-4">
+                <div className="flex h-10 w-10 items-center justify-center bg-accent">
+                  <span className="text-xl font-bold text-white">P</span>
+                </div>
+                <div>
+                  <SheetTitle className="text-lg font-bold text-primary-foreground">
+                    PLOMBIPRO
+                  </SheetTitle>
+                  <span className="text-xs text-primary-foreground/60">Plomberie & Chauffage</span>
+                </div>
+              </div>
+
+              {/* Navigation */}
+              <nav className="flex flex-col px-4 py-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      "border-l-4 px-4 py-3 text-sm font-medium uppercase tracking-wide transition-colors",
+                      "rounded px-4 py-3 text-sm font-medium uppercase tracking-wide transition-colors",
                       pathname === link.href
-                        ? "border-accent bg-primary-foreground/10 text-accent"
-                        : "border-transparent text-primary-foreground/80 hover:border-accent hover:text-accent"
+                        ? "bg-accent/20 text-accent"
+                        : "text-primary-foreground/80 hover:bg-primary-foreground/5 hover:text-accent"
                     )}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className="mt-6 border-t border-primary-foreground/20 pt-6">
-                  <Button
-                    asChild
-                    className="w-full border-2 border-accent bg-accent font-semibold uppercase tracking-wide text-white hover:bg-accent/90"
-                  >
-                    <Link href="/urgence" onClick={() => setIsOpen(false)}>
-                      Urgence 24/7
-                    </Link>
-                  </Button>
-                </div>
               </nav>
+
+              {/* CTA Urgence */}
+              <div className="mt-auto border-t border-primary-foreground/10 p-4">
+                <Button
+                  asChild
+                  className="w-full border-2 border-accent bg-accent py-6 font-semibold uppercase tracking-wide text-white hover:bg-accent/90"
+                >
+                  <Link href="/urgence" onClick={() => setIsOpen(false)}>
+                    <Phone className="mr-2 h-4 w-4" />
+                    Urgence 24/7
+                  </Link>
+                </Button>
+                <a
+                  href={`tel:${companyInfo.phone.replace(/\s/g, "")}`}
+                  className="mt-3 flex items-center justify-center gap-2 text-sm text-primary-foreground/70"
+                >
+                  <Phone className="h-4 w-4" />
+                  {companyInfo.phone}
+                </a>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
