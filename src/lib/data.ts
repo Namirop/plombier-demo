@@ -290,7 +290,8 @@ export const realisations: Realisation[] = [
     typeLabel: "Chauffage",
     imageBefore: "/images/pompe à chaleur avant.png",
     imageAfter: "/images/pompe à chaleur après.png",
-    description: "/images/chaudiere avant.png",
+    description:
+      "Installation d'une pompe à chaleur air/eau pour un chauffage économique et écologique.",
   },
   {
     id: "8",

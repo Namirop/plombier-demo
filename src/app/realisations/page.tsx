@@ -27,6 +27,7 @@ export default function RealisationsPage() {
             src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1600&h=600&fit=crop"
             alt="Réalisations plomberie"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

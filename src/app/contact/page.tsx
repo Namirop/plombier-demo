@@ -45,6 +45,7 @@ export default function ContactPage() {
             src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&h=600&fit=crop"
             alt="Contact PlombiPro"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

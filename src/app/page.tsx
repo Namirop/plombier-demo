@@ -17,6 +17,7 @@ export default function HomePage() {
             src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&h=900&fit=crop"
             alt="Plombier professionnel au travail"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
@@ -119,6 +120,7 @@ export default function HomePage() {
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=800&fit=crop"
                 alt="Technicien PlombiPro"
                 fill
+                sizes="50vw"
                 className="object-cover"
               />
             </div>

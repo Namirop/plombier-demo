@@ -23,6 +23,7 @@ export default function ServicesPage() {
             src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1600&h=600&fit=crop"
             alt="Travaux de plomberie"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

@@ -27,6 +27,7 @@ export default function TarifsPage() {
             src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&h=600&fit=crop"
             alt="Tarifs plomberie"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

@@ -24,11 +24,12 @@ export function RealisationCard({ realisation }: RealisationCardProps) {
         onMouseEnter={() => hasBeforeImage && setShowAfter(true)}
         onMouseLeave={() => hasBeforeImage && setShowAfter(false)}
       >
-        {hasBeforeImage && (
+        {hasBeforeImage && realisation.imageBefore && (
           <Image
             src={realisation.imageBefore}
             alt={`${realisation.title} - Avant`}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className={cn(
               "object-cover transition-opacity duration-500",
               showAfter ? "opacity-0" : "opacity-100"
@@ -39,6 +40,7 @@ export function RealisationCard({ realisation }: RealisationCardProps) {
           src={realisation.imageAfter}
           alt={realisation.title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={cn(
             "object-cover transition-opacity duration-500",
             hasBeforeImage ? (showAfter ? "opacity-100" : "opacity-0") : "opacity-100"
