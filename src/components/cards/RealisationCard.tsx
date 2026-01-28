@@ -12,38 +12,46 @@ interface RealisationCardProps {
 
 export function RealisationCard({ realisation }: RealisationCardProps) {
   const [showAfter, setShowAfter] = useState(false);
+  const hasBeforeImage = !!realisation.imageBefore;
 
   return (
     <div className="group border-2 border-border bg-card transition-colors hover:border-accent">
       <div
-        className="relative aspect-[4/3] cursor-pointer overflow-hidden"
-        onMouseEnter={() => setShowAfter(true)}
-        onMouseLeave={() => setShowAfter(false)}
+        className={cn(
+          "relative aspect-[4/3] overflow-hidden",
+          hasBeforeImage && "cursor-pointer"
+        )}
+        onMouseEnter={() => hasBeforeImage && setShowAfter(true)}
+        onMouseLeave={() => hasBeforeImage && setShowAfter(false)}
       >
-        <Image
-          src={realisation.imageBefore}
-          alt={`${realisation.title} - Avant`}
-          fill
-          className={cn(
-            "object-cover transition-opacity duration-500",
-            showAfter ? "opacity-0" : "opacity-100"
-          )}
-        />
+        {hasBeforeImage && (
+          <Image
+            src={realisation.imageBefore}
+            alt={`${realisation.title} - Avant`}
+            fill
+            className={cn(
+              "object-cover transition-opacity duration-500",
+              showAfter ? "opacity-0" : "opacity-100"
+            )}
+          />
+        )}
         <Image
           src={realisation.imageAfter}
-          alt={`${realisation.title} - Après`}
+          alt={realisation.title}
           fill
           className={cn(
             "object-cover transition-opacity duration-500",
-            showAfter ? "opacity-100" : "opacity-0"
+            hasBeforeImage ? (showAfter ? "opacity-100" : "opacity-0") : "opacity-100"
           )}
         />
         <div className="absolute left-0 top-0 bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
           {realisation.typeLabel}
         </div>
-        <div className="absolute bottom-0 left-0 right-0 bg-primary/90 px-4 py-2 text-sm text-primary-foreground">
-          {showAfter ? "Après" : "Avant"} - Survolez pour voir {showAfter ? "avant" : "après"}
-        </div>
+        {hasBeforeImage && (
+          <div className="absolute bottom-0 left-0 right-0 bg-primary/90 px-4 py-2 text-sm text-primary-foreground">
+            {showAfter ? "Après" : "Avant"} - Survolez pour voir {showAfter ? "avant" : "après"}
+          </div>
+        )}
       </div>
       <div className="p-4">
         <h3 className="font-bold text-foreground">{realisation.title}</h3>

@@ -25,7 +25,7 @@ export interface Realisation {
   duration: string;
   type: "plomberie" | "chauffage" | "urgence" | "renovation";
   typeLabel: string;
-  imageBefore: string;
+  imageBefore?: string;
   imageAfter: string;
   description: string;
 }

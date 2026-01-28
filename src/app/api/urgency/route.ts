@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     // Envoi de l'email via Resend
     await resend.emails.send({
       from: "PlombiPro <onboarding@resend.dev>",
-      to: [process.env.CONTACT_EMAIL || "contact@plombipro.fr"],
+      to: [process.env.CONTACT_EMAIL || "romainmaes@outlook.fr"],
       subject: `🚨 URGENCE - ${urgencyLabels[urgencyType] || urgencyType} - ${city}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

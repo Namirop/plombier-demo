@@ -56,7 +56,7 @@ export async function POST(request: Request) {
     // Envoi de l'email via Resend
     await resend.emails.send({
       from: "PlombiPro <onboarding@resend.dev>",
-      to: [process.env.CONTACT_EMAIL || "contact@plombipro.fr"],
+      to: [process.env.CONTACT_EMAIL || "romainmaes@outlook.fr"],
       replyTo: email,
       subject: `Demande de devis - ${serviceLabels[serviceType] || serviceType} - ${firstName} ${lastName}`,
       html: `
@@ -127,7 +127,7 @@ export async function POST(request: Request) {
             </div>
           </div>
           <div style="padding: 15px; background-color: #1E40AF; color: white; text-align: center; font-size: 12px;">
-            PlombiPro - Plombier Chauffagiste Paris | contact@plombipro.fr
+            PlombiPro - Plombier Chauffagiste Paris | romainmaes@outlook.fr
           </div>
         </div>
       `,
@@ -160,7 +160,7 @@ export async function POST(request: Request) {
 
             <p>En cas d'urgence, n'hésitez pas à nous appeler directement au :</p>
             <p style="text-align: center; font-size: 24px; font-weight: bold; color: #1E40AF;">
-              <a href="tel:0145678910" style="color: #1E40AF; text-decoration: none;">01 45 67 89 10</a>
+              <a href="tel:0640533845" style="color: #1E40AF; text-decoration: none;">06 40 53 38 45</a>
             </p>
 
             <p>À très bientôt,</p>
@@ -168,7 +168,7 @@ export async function POST(request: Request) {
           </div>
           <div style="padding: 15px; background-color: #1E40AF; color: white; text-align: center; font-size: 12px;">
             PlombiPro - 15 Rue de la Fontaine, 75015 Paris<br/>
-            contact@plombipro.fr | 01 45 67 89 10
+            romainmaes@outlook.fr | 06 40 53 38 45
           </div>
         </div>
       `,

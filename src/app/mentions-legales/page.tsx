@@ -13,6 +13,15 @@ export default function MentionsLegalesPage() {
       <div className="mt-4 h-1 w-16 bg-accent" />
 
       <div className="mt-12 max-w-3xl space-y-8 text-muted-foreground">
+        <section className="rounded-lg border-2 border-accent/30 bg-accent/5 p-4">
+          <h2 className="mb-2 text-lg font-semibold text-accent">Site de démonstration</h2>
+          <p>
+            Ce site est un projet de démonstration réalisé à des fins de portfolio.
+            L&apos;entreprise PlombiPro et les informations présentées sont fictives.
+            Aucun service réel de plomberie n&apos;est proposé via ce site.
+          </p>
+        </section>
+
         <section>
           <h2 className="mb-4 text-xl font-semibold text-foreground">Éditeur du site</h2>
           <p>

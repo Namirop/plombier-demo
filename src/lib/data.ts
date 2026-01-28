@@ -19,9 +19,9 @@ export const navLinks: NavLink[] = [
 export const companyInfo = {
   name: "PlombiPro",
   owner: "Michel Dubois",
-  phone: "01 45 67 89 10",
-  phoneUrgency: "01 45 67 89 10",
-  email: "contact@plombipro.fr",
+  phone: "06 40 53 38 45",
+  phoneUrgency: "06 40 53 38 45",
+  email: "romainmaes@outlook.fr",
   address: "15 Rue de la Fontaine",
   city: "75015 Paris",
   fullAddress: "15 Rue de la Fontaine, 75015 Paris",
@@ -240,10 +240,8 @@ export const realisations: Realisation[] = [
     duration: "5 jours",
     type: "renovation",
     typeLabel: "Rénovation",
-    imageBefore:
-      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=400&fit=crop",
-    imageAfter:
-      "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop",
+    imageBefore: "/images/reno sdb avant.png",
+    imageAfter: "/images/reno sdb apres.png",
     description:
       "Transformation complète avec douche à l'italienne, double vasque et rangements optimisés.",
   },
@@ -254,10 +252,8 @@ export const realisations: Realisation[] = [
     duration: "1 jour",
     type: "chauffage",
     typeLabel: "Chauffage",
-    imageBefore:
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop",
-    imageAfter:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    imageBefore: "/images/chaudiere avant.png",
+    imageAfter: "/images/chaudiere après.png",
     description:
       "Remplacement d'une vieille chaudière par un modèle à condensation haute performance.",
   },
@@ -268,10 +264,8 @@ export const realisations: Realisation[] = [
     duration: "2 heures",
     type: "urgence",
     typeLabel: "Urgence",
-    imageBefore:
-      "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&h=400&fit=crop",
-    imageAfter:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop",
+    imageBefore: "/images/fuite avant.png",
+    imageAfter: "/images/fuite après.png",
     description:
       "Intervention d'urgence pour une fuite importante sous plancher, réparation sans destruction.",
   },
@@ -282,26 +276,10 @@ export const realisations: Realisation[] = [
     duration: "3 jours",
     type: "renovation",
     typeLabel: "Rénovation",
-    imageBefore:
-      "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=400&fit=crop",
-    imageAfter:
-      "https://images.unsplash.com/photo-1633505899122-f0fd706d6eb3?w=600&h=400&fit=crop",
+    imageBefore: "/images/douche pmr avant.png",
+    imageAfter: "/images/douche pmr après.png",
     description:
       "Création d'une douche accessible PMR avec siège intégré et barre de maintien.",
-  },
-  {
-    id: "5",
-    title: "Remplacement colonne d'eau",
-    city: "Issy-les-Moulineaux",
-    duration: "2 jours",
-    type: "plomberie",
-    typeLabel: "Plomberie",
-    imageBefore:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop",
-    imageAfter:
-      "https://images.unsplash.com/photo-1613685703305-c4eac14c3e5e?w=600&h=400&fit=crop",
-    description:
-      "Remplacement complet de la colonne d'eau vétuste par une installation en cuivre.",
   },
   {
     id: "6",
@@ -310,26 +288,9 @@ export const realisations: Realisation[] = [
     duration: "2 jours",
     type: "chauffage",
     typeLabel: "Chauffage",
-    imageBefore:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop",
-    imageAfter:
-      "https://images.unsplash.com/photo-1628744404730-5e143358539b?w=600&h=400&fit=crop",
-    description:
-      "Installation d'une pompe à chaleur air/eau pour un chauffage économique et écologique.",
-  },
-  {
-    id: "7",
-    title: "Débouchage canalisation",
-    city: "Paris 14e",
-    duration: "1 heure",
-    type: "urgence",
-    typeLabel: "Urgence",
-    imageBefore:
-      "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&h=400&fit=crop",
-    imageAfter:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop",
-    description:
-      "Débouchage professionnel avec inspection caméra pour vérifier l'état des canalisations.",
+    imageBefore: "/images/pompe à chaleur avant.png",
+    imageAfter: "/images/pompe à chaleur après.png",
+    description: "/images/chaudiere avant.png",
   },
   {
     id: "8",
@@ -338,10 +299,7 @@ export const realisations: Realisation[] = [
     duration: "4 jours",
     type: "renovation",
     typeLabel: "Rénovation",
-    imageBefore:
-      "https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&h=400&fit=crop",
-    imageAfter:
-      "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=600&h=400&fit=crop",
+    imageAfter: "/images/salle d'eau.png",
     description:
       "Création d'une salle d'eau complète dans un espace de 4m² avec optimisation maximale.",
   },
